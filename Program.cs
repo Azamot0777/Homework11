@@ -107,8 +107,30 @@ namespace MyConsoleApp
                     {
                         SelectAll();
                     }
-
+                case 3:
+                    {
+                        Console.Write("Please Select Id:");
+                        int number = int.Parse(Console.ReadLine());
+                        SelectById(number);
+                    }
+                case 4:
+                    {
+                        Console.Write("Enter Name:");
+                        string Name = Console.ReadLine();
+                        Console.Write("Enter Surname:");
+                        string Surname = Console.ReadLine();
+                        Console.Write("Enter MiddleName:");
+                        string MiddleName = Console.ReadLine();
+                        Update(Name, Surname, MiddleName);
+                    }
+                case 5:
+                    {
+                        Console.Write("Select Id to Delete:");
+                        int number = int.Parse(Console.ReadLine());
+                        Delete(number);
+                    }
                 default:
+                    System.Console.WriteLine("Incorrect option");
             }
 
         }
